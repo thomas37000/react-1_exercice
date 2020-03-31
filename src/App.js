@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Avatar from './components/Avatar'
 
 function App() {
+  const homer = {
+    firstName:"Homer",
+    lastName:"Simpsons",
+    image:"https://www.stickees.com/files/cartoon/the-simpsons/2378-network-sticker.png"
+  }
+  const bart = {
+    firstName:"Bart",
+    lastName:"Simpsons",
+    image: "https://www.stickees.com/files/cartoon/the-simpsons/2243-bart-simpson-greeting.png"
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Avatar {...homer}/>
+      <Avatar {...bart}/>
     </div>
   );
 }
